@@ -9,9 +9,15 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
 body {
-  background: url(assets/background.jpg) center center/cover no-repeat fixed;
+  background-image: url('./assets/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #0b2b17; /* fallback color */
   color: #e8f5e9;
 }
+
 
 .container{width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));border-radius:12px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
 
