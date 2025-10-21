@@ -11,11 +11,11 @@ const HEART_MAX = 10; // final at 10 hearts
 const STORAGE_KEY = 'stardew-bday-save-v1';
 
 const gifts = [
-  { id: 1, title: "Dinner Date", revealText: "Dinner at your favourite spot tonight! I'll pick you up at 7.", iconHtml: "🍽️", revealType: "text" },
-  { id: 2, title: "New Game", revealText: "A new game for cozy weekends. (Check the box in my bag!)", iconHtml: "🎮", revealType: "text" },
+  { id: 1, title: "Today's Pics", revealText: "Since you missed today pics, here's some for you", iconHtml: "🍽️", revealType: "photo", photoPath: "assets/1761012744811.jpg" },
+  { id: 2, title: "Coupon", revealText: "A Free Coupon of anything for you (nothing risky and cant fly to you tho💔)", iconHtml: "🎫", revealType: "text" },
   { id: 3, title: "Chill Playlist", revealText: "A playlist I made just for you (link in the note).", iconHtml: "🎧", revealType: "text" },
   { id: 4, title: "Memory Photo", revealText: "Here’s one of our favourite memories.", iconHtml: "🖼️", revealType: "photo", photoPath: "assets/character-male-png" },
-  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10...", iconHtml: "💍", revealType: "final", photoPath: "assets/chest02/png" }
+  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10...", iconHtml: "💍", revealType: "final", photoPath: "IMG-20250728-WA0061.jpg" }
 ];
 
 // App state
@@ -181,11 +181,11 @@ function showReveal(gift){
 function showReasonsEvent(){
   // 5 reasons — personalize these lines!
   const reasons = [
-    "You make every day feel like an adventure.",
-    "Your laugh is my favorite soundtrack.",
-    "You always support my silly ideas.",
-    "You’re kind to people and animals.",
-    "You make me want to be better — and happier."
+    "You make me want to be better, and happier",
+    "I love your laugh and your voice",
+    "Your eyes calming and i wish to see it everyday",
+    "You protect me against those bad things",
+    "You are the only one that could convinced me to start new things"
   ];
   const html = `<strong>Sweet Event — +4 Hearts reached!</strong><br><br>
     <div style="font-family:inherit;line-height:1.4">${reasons.map((r,i)=>`<div>• ${r}</div>`).join('')}</div>`;
@@ -205,7 +205,7 @@ function showPhotoEvent(){
 function showFinalEvent(){
   const html = `<strong>Grand Finale — 10 Hearts!</strong><br><br>
     <div style="text-align:center">
-      <img src="assets/chest02.png" alt="Final" style="max-width:100%;border-radius:8px;border:3px solid rgba(255,255,255,0.03)"/>
+      <img src="assets/IMG-20250728-WA0061.jpg alt="Final" style="max-width:100%;border-radius:8px;border:3px solid rgba(255,255,255,0.03)"/>
     </div>
     <p style="margin-top:8px">Happy Birthday, my love. <br><br>
       [Write your full heartfelt letter here — jsbvibviuebnviuomvoierjgjfnvigij!]</p>`;
