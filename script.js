@@ -7,9 +7,9 @@ const STORAGE_KEY = 'stardew-bday-save-v2';
 const gifts = [
   { id: 1, title: "Today's Pics", revealText: "Since you missed today pics, here's some for you", iconHtml: "📸", revealType: "photo", photoPath: "assets/01.jpg" },
   { id: 2, title: "Coupon", revealText: "A Free Coupon of anything for you (nothing risky and cant fly to you tho💔)", iconHtml: "🎫", revealType: "text" },
-  { id: 3, title: "Laid Back Day", revealText: "A full day play with you, a day of your choosing", iconHtml: "🎮", revealType: "text" },
+  { id: 3, title: "Laid back day", revealText: "A full day play with you, a day of your choosing", iconHtml: "🎮", revealType: "text" },
   { id: 4, title: "Dump", revealText: "Here’s another one", iconHtml: "🖼️", revealType: "photo", photoPath: "assets/02.jpg" },
-  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10...", iconHtml: "💍", revealType: "final", photoPath: "assets/03.jpg" }
+  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10... lalala", iconHtml: "💍", revealType: "final", photoPath: "assets/03.jpg" }
 ];
 
 let state = { energy: ENERGY_MAX, hearts: 0, opened: {} };
@@ -115,14 +115,13 @@ function showReveal(gift){
   showModal(html, [{text:'Close',action:closeModal}]);
 }
 
-
 function showReasonsEvent(){
   const reasons = [
     "You make me want to be better and happier",
     "I love your laugh and your voice",
-    "Your eyes calm me down, and i want to see it everyday",
+    "Your eyes calm me down instantly",
     "You protect me from the bad stuff",
-    "You the only one that successfully convince me to start new things"
+    "You always convince me to start new things"
   ];
   const html = `<strong>Sweet Event — +4 Hearts!</strong><br><br>
     <div style="font-family:inherit;line-height:1.4">
@@ -136,7 +135,7 @@ function showFinalEvent(){
     <div style="text-align:center">
       <img src="assets/IMG-20250728-WA0061.jpg" alt="Final" />
     </div>
-    <p style="margin-top:8px"> 💜 Happy Birthday, my love 💙</p>`;
+    <p style="margin-top:8px">Happy Birthday, my love 💛</p>`;
   showModal(html, [{text:'I love it',action:closeModal}]);
 }
 
