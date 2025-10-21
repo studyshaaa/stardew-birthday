@@ -1,52 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stardew Birthday — A Gift from Your Favorite Farmer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laka's Birthday Edition</title>
 
-  <!-- Pixel font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+    <!-- ini pixel fonts -->
+       <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <main class="container">
     <header class="topbar">
-      <div class="energy" id="energyDisplay">Energy: 100</div>
-      <div class="hearts" id="heartsDisplay" aria-live="polite">Hearts: <span id="heartIcons">🤍🤍🤍🤍🤍</span></div>
+      <div class="energy" id="energyDisplay">Energy : 100</div>
+      <div class="hearts" id="heartsDisplay" aria-live="polite">Hearts : <span id="heartIcons">🤍🤍🤍🤍🤍</span></div>
     </header>
-
+    
     <section class="main-area">
       <div class="left-panel">
         <div class="pixel-character">
-          <div class="you-sprite">👨‍🌾👩‍🌾</div>
-          <p class="pixel-speech" id="greetingText">Happy birthday, Giant Baby!</p>
+          <div class="your-character">👩‍🌾👨‍🌾</div>
+          <p class="pixel-greet" id="greetingText">Happy Birthday Giant Grumpy Baby!</p>
         </div>
         <div class="instructions">
-          Tap a mystery box to open it — each costs <strong>20 Energy</strong> and gives +2 Hearts.
+          Tap this mystery box to open, each cost <strong>20 Energy</strong> and gives +2 Hearts!
         </div>
       </div>
 
-      <div class="inventory" id="inventory">
-        <!-- Boxes injected by JS -->
+      <div class="inventory-box" id="inventory">
+        <!-- boxes in js -->
       </div>
     </section>
 
     <footer class="footer">
       <button id="resetBtn" class="btn">Reset Progress</button>
-      <small>Hosted with pinaplles and coffee</small>
+      <button id="sweetEventBtn" class="btn hidden">Sweet Event</button>
+      <small>Hosted with my fueled coffee and pinapples self</small>
     </footer>
   </main>
 
-  <!-- Modal -->
-  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-card">
-      <div id="modalContent" class="modal-content"></div>
-      <div class="modal-actions" id="modalActions"></div>
+  <!-- hidden pop-up -->
+   <div id="popUp" class="popUp hidden" role="dialog" aria-modal="true">
+    <div class="popUp-card">
+      <div class="popUpContent" class="popUp-content"></div>
+      <div class="popUp-actions" id="popUpActions"></div>
     </div>
-  </div>
-
+   </div>
   <script src="script.js"></script>
 </body>
 </html>
