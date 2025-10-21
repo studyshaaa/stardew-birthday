@@ -14,8 +14,8 @@ const gifts = [
   { id: 1, title: "Dinner Date", revealText: "Dinner at your favourite spot tonight! I'll pick you up at 7.", iconHtml: "🍽️", revealType: "text" },
   { id: 2, title: "New Game", revealText: "A new game for cozy weekends. (Check the box in my bag!)", iconHtml: "🎮", revealType: "text" },
   { id: 3, title: "Chill Playlist", revealText: "A playlist I made just for you (link in the note).", iconHtml: "🎧", revealType: "text" },
-  { id: 4, title: "Memory Photo", revealText: "Here’s one of our favourite memories.", iconHtml: "🖼️", revealType: "photo", photoPath: "assets/photo-memory.jpg" },
-  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10...", iconHtml: "💍", revealType: "final", photoPath: "assets/final-image.jpg" }
+  { id: 4, title: "Memory Photo", revealText: "Here’s one of our favourite memories.", iconHtml: "🖼️", revealType: "photo", photoPath: "assets/character-male-png" },
+  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10...", iconHtml: "💍", revealType: "final", photoPath: "assets/chest02/png" }
 ];
 
 // App state
@@ -196,7 +196,7 @@ function showPhotoEvent(){
   // show the special photo memory
   const html = `<strong>Memory Unlocked — +8 Hearts!</strong><br><br>
     <div style="text-align:center">
-      <img src="assets/photo-memory.jpg" alt="Memory" style="max-width:100%;border-radius:8px;border:3px solid rgba(255,255,255,0.03)"/>
+      <img src="assets/character-male.png" alt="Memory" style="max-width:100%;border-radius:8px;border:3px solid rgba(255,255,255,0.03)"/>
     </div>
     <p style="margin-top:8px">One of my favourite photos of us 💚</p>`;
   showModal(html, [{text:'Nice', action: closeModal}]);
@@ -205,10 +205,10 @@ function showPhotoEvent(){
 function showFinalEvent(){
   const html = `<strong>Grand Finale — 10 Hearts!</strong><br><br>
     <div style="text-align:center">
-      <img src="assets/final-image.jpg" alt="Final" style="max-width:100%;border-radius:8px;border:3px solid rgba(255,255,255,0.03)"/>
+      <img src="assets/chest02.png" alt="Final" style="max-width:100%;border-radius:8px;border:3px solid rgba(255,255,255,0.03)"/>
     </div>
     <p style="margin-top:8px">Happy Birthday, my love. <br><br>
-      [Write your full heartfelt letter here — the space is yours to customize!]</p>`;
+      [Write your full heartfelt letter here — jsbvibviuebnviuomvoierjgjfnvigij!]</p>`;
   showModal(html, [{text:'I love it', action: closeModal}]);
 }
 
