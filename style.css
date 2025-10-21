@@ -15,8 +15,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #3d0522; /* fallback color */
-  color: #2b0928;
+  background-color: #e3a8d8; /* fallback color */
+  color: #e8d9e5;
 }
 
 
@@ -53,7 +53,7 @@ body {
 /* modal */
 .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);padding:20px}
 .hidden{display:none}
-.modal-card{background:#3d0522;padding:18px;border-radius:10px;border:2px solid rgba(255,255,255,0.03);max-width:720px;width:100%}
+.modal-card{background:#dfc1eb;padding:18px;border-radius:10px;border:2px solid rgba(255,255,255,0.03);max-width:720px;width:100%}
 .modal-content{color:var(--muted);font-family:var(--pixel-font);font-size:12px;padding-bottom:10px}
 .modal-actions{display:flex;gap:8px;justify-content:flex-end}
 .modal-actions .btn{background:var(--accent)}
