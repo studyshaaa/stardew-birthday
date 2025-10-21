@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: "Pixelify Sans", cursive;
-  background: url("assets/farm-pixel-bg.png") no-repeat center center fixed;
+  background: url("assets/background.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   display: flex;
