@@ -1,0 +1,38 @@
+body {
+    font-family: 'Courier New', monospace; /* Pixel-art feel */
+    background-color: #87CEEB; /* Sky blue like in Stardew */
+    color: #2F4F2F; /* Dark green text */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #F5DEB3; /* Wheat-like background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #228B22; /* Forest green */
+}
+#farm {
+    margin: 20px 0;
+}
+#farmCanvas {
+    border: 2px solid #8B4513; /* Brown border like soil */
+    background-color: #D2B48C; /* Tan soil color */
+}
+button {
+    background-color: #32CD32; /* Lime green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #228B22;
+}
