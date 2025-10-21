@@ -1,38 +1,57 @@
-body {
-    font-family: 'Courier New', monospace; /* Pixel-art feel */
-    background-color: #87CEEB; /* Sky blue like in Stardew */
-    color: #2F4F2F; /* Dark green text */
-    text-align: center;
-    margin: 0;
-    padding: 20px;
+:root{
+  --bg:#0b2b17;
+  --panel:#122d18;
+  --accent:#ffd86b;
+  --muted:#a3c9a8;
+  --pixel-font: 'Press Start 2P', monospace;
 }
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #F5DEB3; /* Wheat-like background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{background:linear-gradient(180deg,#052215 0%, #0b2b17 100%);color:#e8f5e9;padding:24px;display:flex;align-items:center;justify-content:center;}
+
+.container{width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));border-radius:12px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-family:var(--pixel-font);font-size:12px;color:var(--muted)}
+.energy{background:#073014;padding:10px 14px;border-radius:8px;border:2px solid rgba(255,255,255,0.03)}
+.hearts{background:#08321a;padding:10px 14px;border-radius:8px;border:2px solid rgba(255,255,255,0.02)}
+
+.main-area{display:flex;gap:20px;align-items:flex-start}
+.left-panel{width:320px;background:var(--panel);padding:14px;border-radius:8px;border:2px solid rgba(255,255,255,0.02)}
+.pixel-character{text-align:center;margin-bottom:12px}
+.you-sprite{font-size:48px}
+.pixel-speech{font-family:var(--pixel-font);font-size:12px;background:rgba(255,255,255,0.03);padding:10px;border-radius:6px;margin-top:8px}
+
+.instructions{font-size:13px;color:var(--muted);margin-top:8px}
+
+.inventory{flex:1;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));padding:14px;border-radius:8px;min-height:220px}
+.box{
+  width:120px;height:120px;background:#081f12;border-radius:8px;display:flex;align-items:center;justify-content:center;position:relative;
+  cursor:pointer;border:3px solid rgba(255,255,255,0.02);transition:transform .12s ease, box-shadow .12s ease;
+  font-family:var(--pixel-font);font-size:14px;
 }
-h1 {
-    color: #228B22; /* Forest green */
-}
-#farm {
-    margin: 20px 0;
-}
-#farmCanvas {
-    border: 2px solid #8B4513; /* Brown border like soil */
-    background-color: #D2B48C; /* Tan soil color */
-}
-button {
-    background-color: #32CD32; /* Lime green */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-button:hover {
-    background-color: #228B22;
+.box:hover{transform:translateY(-6px);box-shadow:0 8px 18px rgba(0,0,0,0.6)}
+.box.locked{filter:contrast(.8) grayscale(.1)}
+.box.opened{background:linear-gradient(180deg,#2b5f3a,#1b3f28);}
+
+.box .label{position:absolute;bottom:8px;left:8px;font-size:11px;color:var(--muted)}
+
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.btn{background:var(--accent);color:#222;padding:8px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:700;font-family:inherit}
+.btn:active{transform:translateY(1px)}
+
+/* modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);padding:20px}
+.hidden{display:none}
+.modal-card{background:#0b2b17;padding:18px;border-radius:10px;border:2px solid rgba(255,255,255,0.03);max-width:720px;width:100%}
+.modal-content{color:var(--muted);font-family:var(--pixel-font);font-size:12px;padding-bottom:10px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end}
+.modal-actions .btn{background:var(--accent)}
+
+/* responsive */
+@media (max-width:720px){
+  .main-area{flex-direction:column}
+  .left-panel{width:100%}
+  .inventory{min-height:320px}
+  .box{width:48%;height:110px}
 }
