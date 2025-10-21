@@ -5,11 +5,11 @@ const HEART_MAX = 10;
 const STORAGE_KEY = 'stardew-bday-save-v2';
 
 const gifts = [
-  { id: 1, title: "Today's Pics", revealText: "Since you missed today pics, here's some for you", iconHtml: "📸", revealType: "photo", photoPath: "assets/1761012744811.jpg" },
+  { id: 1, title: "Today's Pics", revealText: "Since you missed today pics, here's some for you", iconHtml: "📸", revealType: "photo", photoPath: "assets/01.jpg" },
   { id: 2, title: "Coupon", revealText: "A Free Coupon of anything for you (nothing risky and cant fly to you tho💔)", iconHtml: "🎫", revealType: "text" },
   { id: 3, title: "Laid Back Day", revealText: "A full day play with you, a day of your choosing", iconHtml: "🎮", revealType: "text" },
-  { id: 4, title: "Dump", revealText: "Here’s another one", iconHtml: "🖼️", revealType: "photo", photoPath: "assets/final.jpg" },
-  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10...", iconHtml: "💍", revealType: "final", photoPath: "assets/final.jpg" }
+  { id: 4, title: "Dump", revealText: "Here’s another one", iconHtml: "🖼️", revealType: "photo", photoPath: "assets/02.jpg" },
+  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10...", iconHtml: "💍", revealType: "final", photoPath: "assets/03.jpg" }
 ];
 
 let state = { energy: ENERGY_MAX, hearts: 0, opened: {} };
