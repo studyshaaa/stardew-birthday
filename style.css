@@ -126,10 +126,10 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Robo
   object-fit:contain;
 }
 
-.popUp img {
-max-width: 80%;
-height: auto;
-object-fit: contain;
+.modal img {
+  max-width:80%;
+  height:auto;
+  object-fit:contain;
 }
 
 /* FOOTER */
@@ -153,7 +153,8 @@ object-fit: contain;
 }
 .btn:active {transform:translateY(1px)}
 
-.popUp {
+/* MODAL */
+.modal {
   position:fixed;
   inset:0;
   display:flex;
@@ -162,12 +163,8 @@ object-fit: contain;
   background:rgba(0,0,0,0.6);
   padding:20px;
 }
-
-.hidden {
-  display:none;
-}
-
-.popUp-card{
+.hidden {display:none}
+.modal-card {
   background:#dfc1eb;
   padding:18px;
   border-radius:10px;
@@ -175,21 +172,20 @@ object-fit: contain;
   max-width:720px;
   width:100%;
 }
-
-.popUpContent {
+.modal-content {
   color:var(--muted);
   font-family:var(--pixel-font);
   font-size:12px;
   padding-bottom:10px;
 }
-
-.popUp-actions {
+.modal-actions {
   display:flex;
   gap:8px;
   justify-content:flex-end;
 }
-
 .modal-actions .btn {background:var(--accent)}
+
+/* RESPONSIVE */
 @media (max-width:720px){
   .inventory{min-height:320px}
   .box{width:46%;height:100px}

@@ -17,9 +17,9 @@ let state = { energy: ENERGY_MAX, hearts: 0, opened: {} };
 const energyDisplay = document.getElementById('energyDisplay');
 const heartsDisplay = document.getElementById('heartIcons');
 const inventoryEl = document.getElementById('inventory');
-const popUp = document.getElementById('modal');
-const popUpContent = document.getElementById('modalContent');
-const popUpActions = document.getElementById('modalActions');
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modalContent');
+const modalActions = document.getElementById('modalActions');
 const resetBtn = document.getElementById('resetBtn');
 const sweetEventBtn = document.getElementById('sweetEventBtn');
 const greetingText = document.getElementById('greetingText');
@@ -67,7 +67,7 @@ function updateUI(){
   const empty = '🤍'.repeat(Math.max(0, 5 - Math.floor(heartsCount/2)));
   heartsDisplay.textContent = filled + empty;
 
-    // toggle Sweet Event button
+  // toggle Sweet Event button
   if(state.hearts >= 4){ sweetEventBtn.classList.remove('hidden'); }
   else { sweetEventBtn.classList.add('hidden'); }
 
@@ -115,6 +115,7 @@ function showReveal(gift){
   showModal(html, [{text:'Close',action:closeModal}]);
 }
 
+
 function showReasonsEvent(){
   const reasons = [
     "You make me want to be better and happier",
@@ -135,7 +136,7 @@ function showFinalEvent(){
     <div style="text-align:center">
       <img src="assets/IMG-20250728-WA0061.jpg" alt="Final" />
     </div>
-    <p style="margin-top:8px">Happy Birthday, my love 💙💜</p>`;
+    <p style="margin-top:8px"> 💜 Happy Birthday, my love 💙</p>`;
   showModal(html, [{text:'I love it',action:closeModal}]);
 }
 
