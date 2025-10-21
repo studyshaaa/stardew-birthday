@@ -1,106 +1,115 @@
 :root{
-  --bg:#0b2b17;
-  --panel:#122d18;
-  --accent:#ffd86b;
-  --muted:#a3c9a8;
+  /*  Base Color Palette */
+  --bg:#0b2b17;        /*  Deep forest green → used for page background and modals */
+  --panel:#ede6f5;     /* 🪵 Slightly lighter green → used for panels/containers */
+  --accent:#ffd86b;    /*  Bright yellow → used for buttons & highlights */
+  --muted:#19051e;     /*  Soft mint green → used for secondary text */
   --pixel-font: 'Press Start 2P', monospace;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
-
+/* BODY / GLOBAL STYLES */
 body {
-  background-image: url('./assets/background.jpg');
+  background-image: url('./assets/background.jpg');  /*  Your pixel-art sky background */
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
-  background-color: #0b2b17; /* fallback color */
-  color: #e8f5e9;
+  background-color: #0b2b17; /* fallback color (same as --bg) */
+  color: #19051e; /* 🌼 Main text color — light mint white-green */
 }
 
-/* subtle overlay for text contrast */
+/* Overlay for darkening background so text is readable */
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: -1;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent black overlay */
 }
 
-/* ===== Responsive Tweaks ===== */
-@media (max-width: 1200px) {
-  body {
-    background-size: 110%;
-    background-position: center top;
-  }
+/* 🪟 MAIN CONTAINER (the box with your content) */
+.container {
+  background: rgba(18, 45, 24, 0.85); /* semi-transparent dark green (based on --panel) */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* shadow under the box */
 }
 
-@media (max-width: 992px) {
-  body {
-    background-size: 130%;
-    background-position: center top;
-  }
+/*  TOP BAR TEXT (Energy / Hearts labels) */
+.topbar {
+  color: var(--muted); /*  soft mint-green text */
 }
 
-@media (max-width: 768px) {
-  body {
-    background-size: 160%;
-    background-position: center center;
-  }
+/*  Energy counter box */
+.energy {
+  background: #cae4d3; /* pale mint background */
+  border: 2px solid rgba(255,255,255,0.03);
 }
 
-@media (max-width: 480px) {
-  body {
-    background-size: 200%;
-    background-position: center bottom;
-  }
+/*  Hearts counter box */
+.hearts {
+  background: #bce3cd; /* slightly darker mint */
+  border: 2px solid rgba(255,255,255,0.02);
 }
 
-
-
-.container{width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));border-radius:12px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
-
-.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-family:var(--pixel-font);font-size:12px;color:var(--muted)}
-.energy{background:#073014;padding:10px 14px;border-radius:8px;border:2px solid rgba(255,255,255,0.03)}
-.hearts{background:#08321a;padding:10px 14px;border-radius:8px;border:2px solid rgba(255,255,255,0.02)}
-
-.main-area{display:flex;gap:20px;align-items:flex-start}
-.left-panel{width:320px;background:var(--panel);padding:14px;border-radius:8px;border:2px solid rgba(255,255,255,0.02)}
-.pixel-character{text-align:center;margin-bottom:12px}
-.you-sprite{font-size:48px}
-.pixel-speech{font-family:var(--pixel-font);font-size:12px;background:rgba(255,255,255,0.03);padding:10px;border-radius:6px;margin-top:8px}
-
-.instructions{font-size:13px;color:var(--muted);margin-top:8px}
-
-.inventory{flex:1;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));padding:14px;border-radius:8px;min-height:220px}
-.box{
-  width:120px;height:120px;background:#081f12;border-radius:8px;display:flex;align-items:center;justify-content:center;position:relative;
-  cursor:pointer;border:3px solid rgba(255,255,255,0.02);transition:transform .12s ease, box-shadow .12s ease;
-  font-family:var(--pixel-font);font-size:14px;
+/* LEFT PANEL (the speech and instructions) */
+.left-panel {
+  background: var(--panel); /* 🪵 dark green from root variable */
+  border: 2px solid rgba(255,255,255,0.02);
 }
-.box:hover{transform:translateY(-6px);box-shadow:0 8px 18px rgba(0,0,0,0.6)}
-.box.locked{filter:contrast(.8) grayscale(.1)}
-.box.opened{background:linear-gradient(180deg,#2b5f3a,#1b3f28);}
 
-.box .label{position:absolute;bottom:8px;left:8px;font-size:11px;color:var(--muted)}
+/* 💬 Dialogue box speech bubble */
+.pixel-speech {
+  background: rgba(255,255,255,0.03); /* almost transparent white overlay */
+  color: #e8f5e9; /* main body text color */
+}
 
-.footer{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
-.btn{background:var(--accent);color:#222;padding:8px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:700;font-family:inherit}
-.btn:active{transform:translateY(1px)}
+/*  Instruction text under speech */
+.instructions {
+  color: var(--muted); /*  muted green */
+}
 
-/* modal */
-.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);padding:20px}
-.hidden{display:none}
-.modal-card{background:#0b2b17;padding:18px;border-radius:10px;border:2px solid rgba(255,255,255,0.03);max-width:720px;width:100%}
-.modal-content{color:var(--muted);font-family:var(--pixel-font);font-size:12px;padding-bottom:10px}
-.modal-actions{display:flex;gap:8px;justify-content:flex-end}
-.modal-actions .btn{background:var(--accent)}
+/* INVENTORY AREA (where all mystery boxes sit) */
+.inventory {
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.01),
+    rgba(0,0,0,0.02)); /* very subtle transparent gradient */
+}
 
-/* responsive */
-@media (max-width:720px){
-  .main-area{flex-direction:column}
-  .left-panel{width:100%}
-  .inventory{min-height:320px}
-  .box{width:48%;height:110px}
+/* MYSTERY BOX STYLES */
+.box {
+  background: #081f12; /* very dark green box base color */
+  color: #e8f5e9; /* text inside the box */
+  border: 3px solid rgba(255,255,255,0.02);
+}
+.box:hover {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.6); /* drop shadow when hovered */
+}
+.box.opened {
+  background: linear-gradient(180deg,#2b5f3a,#1b3f28); /* lighter green gradient when opened */
+}
+
+/*  Box labels (bottom-left text on each box) */
+.box .label {
+  color: var(--muted); /*  soft green label text */
+}
+
+/* 🪶 Buttons */
+.btn {
+  background: var(--accent); /*  bright yellow accent */
+  color: #222; /* 🖤 dark text to contrast the yellow */
+}
+
+/* 🪩 Modal popup overlay */
+.modal {
+  background: rgba(0,0,0,0.6); /* semi-transparent black overlay behind the popup */
+}
+
+/*  Modal content card */
+.modal-card {
+  background: #0b2b17; /*  dark green base (same as --bg) */
+}
+
+/*  Text inside modal */
+.modal-content {
+  color: var(--muted); /*  soft mint text */
+}
+
+/* Modal buttons */
+.modal-actions .btn {
+  background: var(--accent); /*  bright yellow again */
 }
