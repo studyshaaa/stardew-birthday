@@ -8,15 +8,55 @@
 
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+
 body {
   background-image: url('./assets/background.jpg');
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   background-color: #0b2b17; /* fallback color */
   color: #e8f5e9;
 }
+
+/* subtle overlay for text contrast */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* ===== Responsive Tweaks ===== */
+@media (max-width: 1200px) {
+  body {
+    background-size: 110%;
+    background-position: center top;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    background-size: 130%;
+    background-position: center top;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 160%;
+    background-position: center center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: 200%;
+    background-position: center bottom;
+  }
+}
+
 
 
 .container{width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));border-radius:12px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
