@@ -11,11 +11,11 @@ const HEART_MAX = 10; // final at 10 hearts
 const STORAGE_KEY = 'stardew-bday-save-v1';
 
 const gifts = [
-  { id: 1, title: "Dinner Date", revealText: "Dinner at your favourite spot tonight! I'll pick you up at 7.", iconHtml: "🍽️", revealType: "text" },
-  { id: 2, title: "New Game", revealText: "A new game for cozy weekends. (Check the box in my bag!)", iconHtml: "🎮", revealType: "text" },
-  { id: 3, title: "Chill Playlist", revealText: "A playlist I made just for you (link in the note).", iconHtml: "🎧", revealType: "text" },
-  { id: 4, title: "Memory Photo", revealText: "Here’s one of our favourite memories.", iconHtml: "🖼️", revealType: "photo", photoPath: "assets/photo-memory.jpg" },
-  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10...", iconHtml: "💍", revealType: "final", photoPath: "assets/final-image.jpg" }
+  { id: 1, title: "Today's Pics", revealText: "Since you missed today pics, here's some for you", iconHtml: "📸", revealType: "photo", photoPath: "assets/01.jpg" },
+  { id: 2, title: "Coupon", revealText: "A Free Coupon of anything for you (nothing risky and cant fly to you tho💔)", iconHtml: "🎫", revealType: "text" },
+  { id: 3, title: "Laid back day", revealText: "A full day play with you, a day of your choosing", iconHtml: "🎮", revealType: "text" },
+  { id: 4, title: "Dump", revealText: "Here’s another one", iconHtml: "🖼", revealType: "photo", photoPath: "assets/02.jpg" },
+  { id: 5, title: "The Finale", revealText: "Open this when your hearts reach 10... lalala", iconHtml: "💍", revealType: "final", photoPath: "assets/03.jpg" }
 ];
 
 // App state
